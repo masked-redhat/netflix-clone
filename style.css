@@ -1,0 +1,371 @@
+:root {
+    --sep-height: 9px;
+    --screen-dist: calc(100% - 64px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+}
+
+button {
+    color: inherit;
+    border: inherit;
+}
+
+body {
+    background-color: #000;
+}
+
+header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%), center / cover no-repeat url("./assets/images/bg.jpg");
+    padding: 0.1px 0;
+    color: white;
+}
+
+.navigation {
+    display: block;
+    width: var(--screen-dist);
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+}
+
+.btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn span:nth-child(3) {
+    padding-top: 8px;
+}
+
+.btn.transparent {
+    padding: 5px 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgb(90, 90, 90);
+    line-height: 20px;
+    font-weight: 350;
+    font-size: 16px;
+}
+
+.btn.transparent img {
+    filter: invert(1);
+}
+
+.btn.red {
+    padding: 9px 18px;
+    background-color: red;
+    line-height: 14px;
+    font-weight: 550;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 23px;
+    width: var(--screen-dist);
+    margin: calc(var(--screen-dist) / 7) auto;
+}
+
+.heading {
+    width: var(--screen-dist);
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 0 0 20px #000;
+    text-align: center;
+}
+
+.sub-heading {
+    font-size: 24px;
+    text-shadow: 0 0 20px #000;
+    text-align: center;
+}
+
+.tertiary-heading {
+    font-size: 20px;
+    text-shadow: 0 0 20px #000;
+    text-align: center;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.btn.submit img {
+    filter: invert(1);
+    margin-top: 2px;
+}
+
+.btn.submit {
+    padding: 10px 24px 14px;
+    font-size: 24px;
+}
+
+.subscribe button {
+    text-wrap: nowrap;
+}
+
+.subscribe input {
+    border-radius: 4px;
+    padding: 14px 24px;
+    min-width: 30%;
+    background-color: rgba(23, 23, 23, 0.6);
+    border: 1px solid rgb(168, 168, 168);
+    font-size: 16px;
+    color: white;
+}
+
+.welcome form input::placeholder {
+    color: rgb(168, 168, 168);
+}
+
+
+.features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--screen-dist);
+    margin: auto;
+    color: white;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+.border-up {
+    padding-top: var(--sep-height);
+    position: relative;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.border-up::before {
+    content: "";
+    position: absolute;
+    background-color: #232323;
+    width: 100%;
+    height: var(--sep-height);
+    top: 0;
+    left: 0;
+}
+
+.features:nth-child(even) .text {
+    order: 3;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.text h2 {
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.text p {
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 12px;
+}
+
+.videoBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.videoBox img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.videoBox video {
+    position: absolute;
+    z-index: 0;
+}
+
+.video1 video {
+    top: 20%;
+    left: 13%;
+    width: 80%;
+}
+
+.video3 video {
+    top: 10%;
+    left: 18%;
+    width: 63%;
+}
+
+.faq {
+    color: white;
+}
+
+.faq>* {
+    width: var(--screen-dist);
+    margin: auto;
+}
+
+.faq>p {
+    margin: 40px 0 30px;
+}
+
+.questions li img {
+    filter: invert(1);
+    width: 23px;
+}
+
+.questions {
+    width: calc(var(--screen-dist) - 35vw);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 23px auto;
+}
+
+.questions li {
+    list-style: none;
+    width: 100%;
+    background-color: #2d2d2d;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding: 23px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    color: inherit;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer>* {
+    width: calc(var(--screen-dist) - 35vw);
+    margin: auto;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.linkg {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+footer li {
+    text-decoration: underline;
+    list-style: none;
+}
+
+@media screen and (max-width: 960px) {
+    .features article {
+        flex-wrap: wrap;
+    }
+
+    .text {
+        text-align: center;
+        max-width: none;
+    }
+
+    .features:nth-child(even) .text {
+        order: initial;
+    }
+
+    .text h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .text p {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .logo {
+        width: 25vw;
+        min-width: 110px;
+        max-width: 145px;
+    }
+
+    .heading {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+    }
+
+    .tertiary-heading {
+        font-size: 18px;
+    }
+
+    .questions,
+    footer>* {
+        width: var(--screen-dist);
+    }
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --screen-dist: calc(100% - 44px);
+    }
+
+    .navigation {
+        padding-top: 22px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navigation .buttons {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .links {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
